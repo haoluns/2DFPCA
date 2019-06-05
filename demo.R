@@ -3,6 +3,10 @@ load("Mnist.RData")
 source("funs_2DFPCA.R")
 ########
 
+library(dplyr)
+library(fda)
+library(lsei)
+
 
 
 fulldata=observed

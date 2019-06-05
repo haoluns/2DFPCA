@@ -1,5 +1,6 @@
 library(dplyr)
 library(fda)
+library(lsei)
 
 create.2d.basis = function(b1,b2){
 	#spline_basis1 =create.bspline.basis(rangeval=dat$Month_from_baseline%>%range,nbasis=10,norder=4)
