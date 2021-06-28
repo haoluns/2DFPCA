@@ -6,17 +6,17 @@ To circumvent such computational difficulties, we propose a novel two-dimensiona
 
 
 The repository includes two functions:
-* func_2DFPCA.R: The R source code for fitting the two-dimensional FPCA. 
-```rscipt
+* ```func_2DFPCA.R```: The R source code for fitting the two-dimensional FPCA, which contains the following key functions.
+```rscript
 first_FPC_2d_image(beta1, observed, timepoints1, timepoints2, 
 basis1, basis2, threshold, minit) 
 second_FPC_conditional_2d_image(beta1, pc_index, observed, timepoints1, timepoints2, 
-basis1, basis2, betalist, threshold)
+basis1, basis2, betalist, threshold, minit)
 ```
-* demo.R: A demo script for fitting two-dimensional FPCA on the MNIST data of digit 0.
-* demo_simu.R: A demo script for a simulation study of the two-dimensional FPCA.
-* Mnist.RData: The MNIST handwritten digits data set. Can be downloaded with ```download.file```.
-* fpc_0and1x.RData: The first three FPCs for the simulation study. Can be downloaded with ```download.file```.
+* ```demo.R```: A demo script for fitting two-dimensional FPCA on the MNIST data of digit 0.
+* ```demo_simu.R```: A demo script for a simulation study of the two-dimensional FPCA.
+* ```Mnist.RData```: The MNIST handwritten digits data set. Can be downloaded with ```download.file```.
+* ```fpc_0and1x.RData```: The first three FPCs for the simulation study. Can be downloaded with ```download.file```.
 
 
 
