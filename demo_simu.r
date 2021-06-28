@@ -6,6 +6,9 @@ if (length(missed_packages)) {
   sapply(missed_packages, install.packages)
 }
 
+download.file("https://raw.github.com/haoluns/2DFPCA/master/fpc_0and1x.RData", 
+destfile = "fpc_0and1x.RData", method = "wget")
+
 load("fpc_0and1x.RData")
 source("funs_2DFPCA.R")
 
@@ -142,7 +145,7 @@ for (iii in 1:length(ncurvelist)) {
           previous_beta[[1]] <- res_first$beta
           pc_list[[1]] <- res_first$pc_fit
         } else {
-          res_second <- second_FPC_conditional_2d_image(beta1, pc_index = i, sobserved, timepoints1, timepoints2, basis1, basis2, betalist = previous_beta, threshold = 1e-5, minit = 1)
+          res_second <- second_FPC_conditional_2d_image(/, pc_index = i, sobserved, timepoints1, timepoints2, basis1, basis2, betalist = previous_beta, threshold = 1e-5, minit = 1)
           result_list[[i]] <- res_second
           previous_beta[[i]] <- res_second$beta
           pc_list[[i]] <- res_second$pc_fit

@@ -6,6 +6,8 @@ if (length(missed_packages)) {
   sapply(missed_packages, install.packages)
 }
 
+download.file("https://raw.github.com/haoluns/2DFPCA/master/Mnist.RData", 
+destfile = "Mnist.RData", method = "wget")
 
 load("Mnist.RData")
 source("funs_2DFPCA.R")
@@ -42,6 +44,10 @@ basis1 <- create.bspline.basis(rangeval = c(1, maxpixelsize), nbasis = nbasis, n
 basis2 <- create.bspline.basis(rangeval = c(1, maxpixelsize), nbasis = nbasis, norder = 4)
 
 
+initializeGlobalXmat(timepoints1, timepoints2, basis1, basis2)
+
+
+	
 previous_beta <- list()
 pc_list <- list()
 result_list <- list()

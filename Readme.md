@@ -14,9 +14,9 @@ second_FPC_conditional_2d_image(beta1, pc_index, observed, timepoints1, timepoin
 basis1, basis2, betalist, threshold)
 ```
 * demo.R: A demo script for fitting two-dimensional FPCA on the MNIST data of digit 0.
-* demo_simu.R: The MNIST handwritten digits data set.
-* Mnist.RData: A demo script for a simulation study of the two-dimensional FPCA.
-* fpc_0and1x.RData: The first three FPCs for the simulation study.
+* demo_simu.R: A demo script for a simulation study of the two-dimensional FPCA.
+* Mnist.RData: The MNIST handwritten digits data set. Can be downloaded with ```download.file```.
+* fpc_0and1x.RData: The first three FPCs for the simulation study. Can be downloaded with ```download.file```.
 
 
 
@@ -36,6 +36,9 @@ basis1, basis2, betalist, threshold)
 # Example
 We apply the two-dimensional FPCA method to all the images with digit 0 in the MNIST data set. The code depends on R packages ```fda```, ```dplyr``` and ```lsei```. 
 ```rscript
+download.file("https://raw.github.com/haoluns/2DFPCA/master/Mnist.RData", 
+destfile = "Mnist.RData", method = "wget")
+
 load("Mnist.RData")
 source("funs_2DFPCA.R")
 
