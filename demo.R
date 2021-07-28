@@ -6,8 +6,7 @@ if (length(missed_packages)) {
   sapply(missed_packages, install.packages)
 }
 
-download.file("https://raw.github.com/haoluns/2DFPCA/master/Mnist.RData", 
-destfile = "Mnist.RData", method = "wget")
+
 
 load("Mnist.RData")
 source("funs_2DFPCA.R")

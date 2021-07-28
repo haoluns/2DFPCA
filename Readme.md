@@ -36,8 +36,7 @@ basis1, basis2, betalist, threshold, minit)
 # Example
 We apply the two-dimensional FPCA method to all the images with digit 0 in the MNIST data set. The code depends on R packages ```fda```, ```dplyr``` and ```lsei```. 
 ```rscript
-download.file("https://raw.github.com/haoluns/2DFPCA/master/Mnist.RData", 
-destfile = "Mnist.RData", method = "wget")
+
 
 load("Mnist.RData")
 source("funs_2DFPCA.R")

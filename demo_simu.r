@@ -6,8 +6,6 @@ if (length(missed_packages)) {
   sapply(missed_packages, install.packages)
 }
 
-download.file("https://raw.github.com/haoluns/2DFPCA/master/fpc_0and1x.RData", 
-destfile = "fpc_0and1x.RData", method = "wget")
 
 load("fpc_0and1x.RData")
 source("funs_2DFPCA.R")
