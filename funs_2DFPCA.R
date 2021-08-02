@@ -274,7 +274,9 @@ first_FPC_2d_image <- function(beta1, observed, timepoints1, timepoints2, basis1
     thresh <- max(abs(c(beta1_before) - c(beta1)))
     it <- it + 1
     {
-      print(paste0("Iteration ", it));print(paste0("Tol: ", as.numeric(thresh)));
+		
+		print(paste0("FPC ", 1, ",Iteration ", it));print(paste0("Maximum Absolute Change in Coefs: ", as.numeric(thresh)));
+		      
     }
   }##while end
 
@@ -409,9 +411,9 @@ second_FPC_conditional_2d_image <- function(beta1, pc_index, observed, timepoint
     it <- it + 1
     
     {
-      print(paste0("FPC ", pc_index, ",Iteration ", it));print(paste0("Tol: ", as.numeric(thresh)));
-    }
+      print(paste0("FPC ", pc_index, ",Iteration ", it));print(paste0("Maximum Absolute Change in Coefs: ", as.numeric(thresh)));
 
+    }
     end_time <- Sys.time()
     #print(end_time - start_time	)
   }#while end
